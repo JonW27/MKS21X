@@ -1,6 +1,6 @@
-Push
-Pull
-Commit
-Clone
-Checkout
+Push - syncs the local copy to the online repository
+Pull - pulls the online copy to update the local copy
+Commit - updates the version history with a message and the edits made
+Clone - copies the online repository
+Checkout - switches branches
 
