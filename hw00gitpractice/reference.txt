@@ -1,0 +1,6 @@
+Push
+Pull
+Commit
+Clone
+Checkout
+
