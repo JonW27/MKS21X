@@ -1,6 +1,6 @@
-Push - syncs the local copy to the online repository
+Push - syncs the locbogus changeal copy to the online repository
 Pull - pulls the online copy to update the local copy
-Commit - updates the version history with a message and the edits made
-Clone - copies the online repository
-Checkout - switches branches
+Commit - updates the version hbogus changeistory with a messbogus changeage and the edits made
+Clone - copies the onbogus changeline repository
+Chbogus changeeckout - switches branches
 
