@@ -17,7 +17,7 @@ public class Barcode implements Comparable<Barcode>{
         _zip = zip;
         _checkDigit = checkSum()%10;
       }
-      finally{
+      catch(NumberFormatException e){
         System.out.println("Zip contains a nondigit");
       }
     }
@@ -43,8 +43,9 @@ public class Barcode implements Comparable<Barcode>{
 //ex. "084518  |||:::|::|::|::|:|:|::::|||::|:|"
   public String toString(){
     String jo = "|";
-    for(int i = 0; i < _zip.length(); i++){
-      switch(_zip.charAt(i)){
+    String lol = _zip + _checkDigit;
+    for(int i = 0; i < lol.length(); i++){
+      switch(Character.getNumericValue(lol.charAt(i))){
         case 0:
           jo += "||:::";
           break;
@@ -77,7 +78,7 @@ public class Barcode implements Comparable<Barcode>{
           break;
       }
     }
-    jo = jo + _checkDigit + "|";
+    jo += "|";
     return jo;
   }
 
