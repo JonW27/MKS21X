@@ -26,22 +26,26 @@ public class Sorts{
   }
   public static void insertionSort(int[] data){
       for(int i = 1; i < data.length; i++){
-	  int check = data[i];
-	  int temp = 0;
-	  if(check < data[i-1]){
-	      int temp2 = check;
-	      int temp3 = temp2;
-	      for(int k = 0; k < i; k++){
-		  temp3 = data[k];
-		  data[k] = temp2;
-		  temp2 = temp3;
-	      }
-	  }
+      	  int check = data[i];
+      	  if(check < data[i-1]){
+      	      int temp = check;
+              int temp2;
+      	      for(int k = 0; k < i+1; k++){
+                if(check < data[k] || k == i){
+                  temp2 = data[k];
+            		  data[k] = temp;
+                  temp = temp2;
+                }
+      	      }
+      	  }
       }
   }
   public static void main(String[] args){
 	  int[] lol = {233, 34, 43, -3, 0, 4, 67};
-	  System.out.println("What it should be"+Arrays.toString(Arrays.Sort(lol)));
+    int[] ideal = new int[lol.length];
+    System.arraycopy(lol,0,ideal,0,lol.length);
+    Arrays.sort(ideal);
+	  System.out.println("What it should be:\n"+Arrays.toString(ideal)+"\nWhat it is:");
 	  insertionSort(lol);
 	  System.out.println(Arrays.toString(lol));
   }
