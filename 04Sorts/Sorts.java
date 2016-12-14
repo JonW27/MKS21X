@@ -24,9 +24,25 @@ public class Sorts{
           data[i] = smallest;
       }
   }
+  public static void insertionSort(int[] data){
+      for(int i = 1; i < data.length; i++){
+	  int check = data[i];
+	  int temp = 0;
+	  if(check < data[i-1]){
+	      int temp2 = check;
+	      int temp3 = temp2;
+	      for(int k = 0; k < i; k++){
+		  temp3 = data[k];
+		  data[k] = temp2;
+		  temp2 = temp3;
+	      }
+	  }
+      }
+  }
   public static void main(String[] args){
 	  int[] lol = {233, 34, 43, -3, 0, 4, 67};
-	  selectionSort(lol);
+	  System.out.println("What it should be"+Arrays.toString(Arrays.Sort(lol)));
+	  insertionSort(lol);
 	  System.out.println(Arrays.toString(lol));
   }
 
