@@ -40,13 +40,26 @@ public class Sorts{
       	  }
       }
   }
+  public static void bubbleSort(int[] data){
+    first:
+    for(int i = 0; i < data.length; i++){
+      for(int j = 0; j < data.length - i - 1; j++){
+        int temp = 0;
+        if(data[j+1] < data[j]){
+          temp = data[j+1];
+          data[j+1] = data[j];
+          data[j] = temp;
+        }
+      }
+    }
+  }
   public static void main(String[] args){
-	  int[] lol = {233, 34, 43, -3, 0, 4, 67};
+	  int[] lol = {233, 34, 43, 11, -3, 0, 23, 36, 4, 67};
     int[] ideal = new int[lol.length];
     System.arraycopy(lol,0,ideal,0,lol.length);
     Arrays.sort(ideal);
 	  System.out.println("What it should be:\n"+Arrays.toString(ideal)+"\nWhat it is:");
-	  insertionSort(lol);
+	  bubbleSort(lol);
 	  System.out.println(Arrays.toString(lol));
   }
 
