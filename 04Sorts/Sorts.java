@@ -41,7 +41,6 @@ public class Sorts{
       }
   }
   public static void bubbleSort(int[] data){
-    first:
     for(int i = 0; i < data.length; i++){
       for(int j = 0; j < data.length - i - 1; j++){
         int temp = 0;
